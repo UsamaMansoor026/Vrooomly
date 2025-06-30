@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import HeroCar from "../assets/main_car.png";
 
 const Hero = () => {
@@ -9,7 +8,7 @@ const Hero = () => {
   const [location, setLocation] = useState("");
 
   return (
-    <section className="bg-primary-bg text-primary-text py-16 px-4">
+    <section className="global-padding bg-primary-bg text-primary-text py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* Headline */}
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-accent">

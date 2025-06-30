@@ -1,6 +1,7 @@
 import { Header } from "./components";
 import { Route, Routes } from "react-router-dom";
-import { Home } from "./pages";
+import { CarDetail, Home } from "./pages";
+import "react-datepicker/dist/react-datepicker.css";
 
 const App = () => {
   return (
@@ -9,6 +10,7 @@ const App = () => {
 
       <Routes>
         <Route index element={<Home />} />
+        <Route path="/car-detail/:id" element={<CarDetail />} />
       </Routes>
     </>
   );

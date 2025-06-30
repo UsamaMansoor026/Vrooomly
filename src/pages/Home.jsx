@@ -1,12 +1,20 @@
-import React from "react";
-import { FeaturedCars, Hero } from "../components";
+import {
+  Cta,
+  FeaturedCars,
+  Hero,
+  NeverMisDeal,
+  Testimonials,
+} from "../components";
 
 const Home = () => {
   return (
-    <div className="global-padding">
+    <>
       <Hero />
       <FeaturedCars />
-    </div>
+      <Cta />
+      <Testimonials />
+      <NeverMisDeal />
+    </>
   );
 };
 

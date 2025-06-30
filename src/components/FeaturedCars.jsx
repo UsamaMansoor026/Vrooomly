@@ -1,19 +1,21 @@
 import React from "react";
 import { cars } from "../assets";
+import { Link } from "react-router-dom";
+import SectionHeading from "./SectionHeading";
 
 const FeaturedCars = () => {
   return (
-    <section className="bg-primary-bg text-primary-text py-16 px-4">
-      <div className="max-w-7xl mx-auto text-center mb-10">
-        <h2 className="text-4xl font-bold text-accent mb-4">Featured Cars</h2>
-        <p className="text-secondary-text">
-          Explore our most popular cars, ready to hit the road!
-        </p>
-      </div>
+    <section className="global-padding bg-primary-bg text-primary-text py-16 px-4">
+      <SectionHeading
+        heading="Featured Cars"
+        subHeading="Explore our most popular cars, ready to hit the road!"
+      />
 
       <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
         {cars.map((car) => (
-          <article
+          <Link
+            to={`/car-detail/${car.id}`}
+            state={{ car }}
             key={car.id}
             className="bg-secondary-bg rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition duration-400 hover:-translate-y-2 cursor-pointer"
           >
@@ -65,7 +67,7 @@ const FeaturedCars = () => {
                 </div>
               </div>
             </div>
-          </article>
+          </Link>
         ))}
       </div>
 

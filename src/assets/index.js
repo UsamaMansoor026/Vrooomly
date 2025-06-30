@@ -6,6 +6,11 @@ import SuzukiALto from "../assets/cars/Suzuki-Alto.jpg";
 import NissaNote from "../assets/cars/Nissan-Note.jpeg";
 import hyundaiElantra from "../assets/cars/Hyundai-Elantra.jpg";
 
+/* Customers */
+import customer1 from "../assets/customers/avatar13.jpg";
+import customer2 from "../assets/customers/avatar14.jpg";
+import customer3 from "../assets/customers/avatar8.jpg";
+
 export const cars = [
   {
     id: 1,
@@ -97,5 +102,32 @@ export const cars = [
     location: "Rawalpindi",
     dailyRent: 250,
     available: "Available",
+  },
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    name: "Ali Khan",
+    city: "Lahore",
+    rating: 5,
+    text: "Vrooomly made my trip so smooth! The car was in excellent condition and the booking process was effortless. Highly recommended!",
+    avatar: customer1,
+  },
+  {
+    id: 2,
+    name: "Sarah Ahmed",
+    city: "Karachi",
+    rating: 4,
+    text: "Great service and clean vehicles. I just wish there were more pickup locations, but overall a very good experience.",
+    avatar: customer2,
+  },
+  {
+    id: 3,
+    name: "Usman Raza",
+    city: "Islamabad",
+    rating: 5,
+    text: "Fantastic platform! I loved how quick the reservation was and the support team was super helpful when I had questions.",
+    avatar: customer3,
   },
 ];
