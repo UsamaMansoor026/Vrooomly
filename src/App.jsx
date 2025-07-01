@@ -1,4 +1,4 @@
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 import { Route, Routes } from "react-router-dom";
 import { CarDetail, Home } from "./pages";
 import "react-datepicker/dist/react-datepicker.css";
@@ -12,6 +12,8 @@ const App = () => {
         <Route index element={<Home />} />
         <Route path="/car-detail/:id" element={<CarDetail />} />
       </Routes>
+
+      <Footer />
     </>
   );
 };

@@ -6,6 +6,7 @@ import Cta from "./cta";
 import Testimonials from "./Testimonials";
 import SectionHeading from "./SectionHeading";
 import NeverMisDeal from "./NeverMisDeal";
+import Footer from "./Footer";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   Testimonials,
   SectionHeading,
   NeverMisDeal,
+  Footer,
 };
