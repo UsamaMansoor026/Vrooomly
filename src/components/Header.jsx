@@ -20,10 +20,10 @@ const Header = () => {
           <Link to="/" className="hover:text-accent transition">
             Home
           </Link>
-          <Link to="/cars" className="hover:text-accent transition">
+          <Link to="/browse-cars" className="hover:text-accent transition">
             Cars
           </Link>
-          <Link to="/bookings" className="hover:text-accent transition">
+          <Link to="/my-bookings" className="hover:text-accent transition">
             My Bookings
           </Link>
           <button
