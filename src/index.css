@@ -28,6 +28,7 @@
 body {
   background: var(--color-primary-bg);
   color: var(--color-primary-text);
+  overflow-x: hidden;
 }
 
 .global-padding {

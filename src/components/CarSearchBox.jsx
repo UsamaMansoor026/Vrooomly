@@ -1,12 +1,6 @@
 import { useState } from "react";
 
-const CarSearchBox = () => {
-  const [searchCar, setSearchCar] = useState("");
-
-  const handleOnChange = (e) => {
-    setSearchCar(e.target.value);
-  };
-
+const CarSearchBox = ({ handleOnChange }) => {
   return (
     <div className="max-w-[500px] mx-auto bg-secondary-bg flex items-center gap-1.5 px-4 py-2 rounded-full">
       <img
@@ -16,7 +10,6 @@ const CarSearchBox = () => {
 
       <input
         type="text"
-        value={searchCar}
         onChange={handleOnChange}
         required
         placeholder="Search by car name..."

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import HeroCar from "../assets/main_car.png";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   const [pickupDate, setPickupDate] = useState(null);
@@ -11,20 +12,35 @@ const Hero = () => {
     <section className="global-padding bg-primary-bg text-primary-text py-16 px-4">
       <div className="max-w-4xl mx-auto text-center">
         {/* Headline */}
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-accent">
+        <motion.h1
+          initial={{ y: 70, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="text-4xl md:text-5xl font-bold mb-4 text-accent"
+        >
           Drive Your Dream Car Today
-        </h1>
-        <p className="text-secondary-text mb-10">
+        </motion.h1>
+        <motion.p
+          initial={{ y: 70, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 1.1 }}
+          className="text-secondary-text mb-10"
+        >
           Vrooomly makes car rentals seamless. Choose your ride, pick a date,
           and hit the road.
-        </p>
+        </motion.p>
 
         {/* Form */}
-        <form
+        {/* <motion.form
+          initial={{ y: 70, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 1.6 }}
           onSubmit={(e) => e.preventDefault()}
           className="bg-secondary-bg p-4 rounded-lg shadow-md flex flex-col md:flex-row items-stretch md:items-end justify-between gap-4 mb-10"
         >
-          {/* Location Select */}
           <div className="w-full flex flex-col items-start space-y-1">
             <label
               htmlFor="location"
@@ -44,7 +60,6 @@ const Hero = () => {
             </select>
           </div>
 
-          {/* Pickup Date */}
           <div className="w-full flex flex-col items-start space-y-1">
             <label
               htmlFor="pickupdate"
@@ -60,7 +75,6 @@ const Hero = () => {
             />
           </div>
 
-          {/* Return Date */}
           <div className="w-full flex flex-col items-start space-y-1">
             <label
               htmlFor="returndate"
@@ -76,18 +90,21 @@ const Hero = () => {
             />
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-accent hover:bg-accent-hover text-primary-bg font-bold py-2 px-6 rounded-md transition"
           >
             Search Car
           </button>
-        </form>
+        </motion.form> */}
 
         {/* Car Image */}
         <div className="text-center">
-          <img
+          <motion.img
+            initial={{ y: 70, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 1.4 }}
             src={HeroCar}
             alt="Car rental"
             className="w-full  mx-auto rounded-lg shadow-lg"

@@ -36,7 +36,6 @@ const Signup = ({ setShowAuthPopup }) => {
             name="email"
             id="email"
             placeholder="type here..."
-            autoFocus
             className="px-3 py-2 outline-none border border-border rounded"
           />
         </div>

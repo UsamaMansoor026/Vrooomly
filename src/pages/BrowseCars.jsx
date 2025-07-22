@@ -1,8 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { cars } from "../assets";
 import { CarCard, CarSearchBox, SectionHeading } from "../components";
 
 const BrowseCars = () => {
+  const [filteredCars, setFilteredCars] = useState(cars);
+
+  const handleOnChange = (e) => {
+    if (e.target.value === "") {
+      return setFilteredCars(cars);
+    }
+
+    const changeCars = cars.filter((car) => car.name.includes(e.target.value));
+
+    cars.length > 0 ? setFilteredCars(changeCars) : setFilteredCars(cars);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -14,7 +26,7 @@ const BrowseCars = () => {
         subHeading="Browse our selection of premium vehicles available for your next adventure"
       />
 
-      <CarSearchBox />
+      <CarSearchBox handleOnChange={handleOnChange} />
 
       {/* Cars Grid */}
       <div className="mt-16 space-y-4">
@@ -22,7 +34,7 @@ const BrowseCars = () => {
           Showing {cars.length} Cars
         </p>
         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-          {cars.map((car) => (
+          {filteredCars.map((car) => (
             <CarCard car={car} key={car.id} />
           ))}
         </div>

@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Login, Signup } from "../pages";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,7 +9,13 @@ const Header = () => {
 
   return (
     <>
-      <header className="global-padding bg-secondary-bg text-secondary-text shadow-md shadow-shadow">
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="global-padding bg-secondary-bg z-20 text-secondary-text shadow-md shadow-shadow"
+      >
         <div className="max-w-7xl mx-auto py-5 flex items-center justify-between">
           {/* Logo */}
           <Link
@@ -71,7 +78,7 @@ const Header = () => {
             </button>
           </div>
         )}
-      </header>
+      </motion.header>
 
       {/* Login Form */}
       {showAuthPopup === "login" && (
