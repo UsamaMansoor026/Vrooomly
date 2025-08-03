@@ -1,0 +1,20 @@
+{
+  "name": "vrooomly-server",
+  "version": "1.0.0",
+  "description": "This is the server side of the Vrooomly, which contains API's and all the data handling",
+  "license": "ISC",
+  "author": "Usama Mansoor",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.17.0",
+    "nodemon": "^3.1.10"
+  }
+}
