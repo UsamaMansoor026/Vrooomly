@@ -57,13 +57,25 @@ const Header = () => {
         {/* Mobile Menu */}
         {menuOpen && (
           <div className="md:hidden px-4 pb-4 space-y-2 text-primary-text bg-secondary-bg">
-            <Link to="/" className="block hover:text-accent">
+            <Link
+              to="/"
+              className="block hover:text-accent"
+              onClick={() => setMenuOpen(false)}
+            >
               Home
             </Link>
-            <Link to="/cars" className="block hover:text-accent">
+            <Link
+              to="/browse-cars"
+              className="block hover:text-accent"
+              onClick={() => setMenuOpen(false)}
+            >
               Cars
             </Link>
-            <Link to="/bookings" className="block hover:text-accent">
+            <Link
+              to="/my-bookings"
+              className="block hover:text-accent"
+              onClick={() => setMenuOpen(false)}
+            >
               My Bookings
             </Link>
             <button
